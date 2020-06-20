@@ -14,15 +14,15 @@ Not every data needs to be stored in database. Some data doesn't even require mo
 DataMemo class accepts two arguments on initialization.
 
 - The first argument being the name of the file to modify or create.
-- The second argument (optional) being an absolute path to the file. \
+- The second argument (optional) being an absolute path to the file. 
   
-  If not set, the path will be equivalent to the same diretory where the "data-memo.php" file is located.`
+  If not set, the path will be equivalent to the same diretory where the "data-memo.php" file is located.
   
 ``` 
-  $datamemo = new datamemo("filename.json", __DIR__ ); 
+  $datamemo = new datamemo( "filename.json", __DIR__ ); 
 ```
 
-If the "filename.json" already contains a valid json file, the $datamemo instance will be filled with the array format of the json data.
+If the ` filename.json ` already contains a valid json file, the $datamemo instance will be filled with the array format of the json data.
 
 You can then assign new value, get previous or update previous values in the $datamemo instance.
 
@@ -45,19 +45,23 @@ Now to get the data in the datamemo object:
   $datamemo->project['website']; // 'https://ucscode.com'
 ```
 
-Now to save the file.
+To save the data.
 ```
   $datamemo->save();
 ```
 
 The above method ```  datamemo::save()  ``` will print the data of $datamemo object as json into ```  __DIR__ . "/filename.json"  ```
 
-You can also call the ``` $datamemo->pretty_print() ``` method before saving to pretty print the json file.
+You can also call the ``` $datamemo->pretty_print() ``` method before the save method to pretty print the json data.
 
 ``` $datamemo->clear()  ``` to clear the file
 
 ``` $datamemo->remove()  ``` to remove (delete) the file
 
+------------------------------------------------------------------
+
+@https://facebook.com/ajah.uchenna.9
+@https://ucscode.com
 
 
 

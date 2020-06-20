@@ -1,3 +1,5 @@
+Copyright (c) 2020 by ucscode
+
 # data-memo
 Data Memo is a light weight data saver that creates, modifies, retrieve or store data (to any user defined file) as json.
 
@@ -32,8 +34,21 @@ Now to get the data in the datamemo object:
 ```
 $datamemo->name; // 'uchenna ajah'
 $datamemo->project['name']; // 'datamemo'
+$datamemo->project['website']; // 'https://ucscode.com'
 ```
 
+Now to save the file.
+```
+$datamemo->save();
+```
+
+The above method ```datamemo::save()``` will print the data in $datamemo object as json to ``` __DIR__ . "/filename.json" ```
+
+You can also call the ```$datamemo->pretty_print()``` method before saving to pretty print the json file.
+
+```$datamemo->clear()``` to clear the file
+
+```$datamemo->remove()``` to remove (delete) the file
 
 
 

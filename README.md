@@ -10,6 +10,8 @@ Not every data needs to be stored in database. Some data doesn't even require mo
   require_once "path/to/data-memo.php"; 
 ```
 
+The php inbuilt function ` ini_set( "display_errors", true ) ` needs to be called for data-memo error to be displayed
+
 ### How To Use
 DataMemo class accepts two arguments on initialization.
 

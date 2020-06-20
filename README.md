@@ -13,41 +13,50 @@ Not every data needs to be stored in database. Some data doesn't even require mo
 ### How To Use
 DataMemo class accepts two arguments on initialization.
 
-- The first being the name of the file to modify or create. \
-- The second (optional) being an absolute path to the file. \
-  `If not set, the path will be equivalent to the same diretory where the "data-memo.php" file is located.`
+- The first argument being the name of the file to modify or create.
+- The second argument (optional) being an absolute path to the file. \
   
-``` $datamemo = new datamemo("filename.json", __DIR__ ); ```
+  If not set, the path will be equivalent to the same diretory where the "data-memo.php" file is located.`
+  
+``` 
+  $datamemo = new datamemo("filename.json", __DIR__ ); 
+```
 
-If the "filename.json" already contains a valid json file, the $datamemo instance will be filled with the array format of the json data.\
+If the "filename.json" already contains a valid json file, the $datamemo instance will be filled with the array format of the json data.
+
 You can then assign new value, get previous or update previous values in the $datamemo instance.
 
 ``` 
-$datamemo->name = 'uchenna ajah';
-$datamemo->developer = 'ucscode';
-$datamemo->project = array("name" => "datamemo");
-$datamemo->project['website'] = 'https://ucscode.com';
+  $datamemo->name = 'uchenna ajah';
+  
+  $datamemo->developer = 'ucscode';
+  
+  $datamemo->project = array("name" => "datamemo");
+  
+  $datamemo->project['website'] = 'https://ucscode.com';
 ```
 Now to get the data in the datamemo object:
 
 ```
-$datamemo->name; // 'uchenna ajah'
-$datamemo->project['name']; // 'datamemo'
-$datamemo->project['website']; // 'https://ucscode.com'
+  $datamemo->name; // 'uchenna ajah'
+   
+  $datamemo->project['name']; // 'datamemo'
+  
+  $datamemo->project['website']; // 'https://ucscode.com'
 ```
 
 Now to save the file.
 ```
-$datamemo->save();
+  $datamemo->save();
 ```
 
-The above method ```datamemo::save()``` will print the data in $datamemo object as json to ``` __DIR__ . "/filename.json" ```
+The above method ```  datamemo::save()  ``` will print the data of $datamemo object as json into ```  __DIR__ . "/filename.json"  ```
 
-You can also call the ```$datamemo->pretty_print()``` method before saving to pretty print the json file.
+You can also call the ``` $datamemo->pretty_print() ``` method before saving to pretty print the json file.
 
-```$datamemo->clear()``` to clear the file
+``` $datamemo->clear()  ``` to clear the file
 
-```$datamemo->remove()``` to remove (delete) the file
+``` $datamemo->remove()  ``` to remove (delete) the file
 
 
 
